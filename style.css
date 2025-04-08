@@ -317,16 +317,6 @@ body {
   width: 50%;
 }
 
-.list-item:hover {
-  background: #85cbf2;
-  color: black;
-}
-
-.list-item:active {
-  background: #1280f2;
-  color: white;
-}
-
 .right-container__buttons {
   display: flex;
   justify-content: space-around;
