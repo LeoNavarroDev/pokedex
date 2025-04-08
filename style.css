@@ -1,262 +1,200 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.logo{
-  position: absolute;
-  width: 11em;
-  height: auto;
-  top: 2.5em;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-
 body {
-  margin: 0;
-  padding: 0;
   height: 100vh;
   width: 100%;
   background-color: black;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  display: block;
   place-content: center;
   place-items: center;
 }
 
-.contenedor {
+.main {
   position: relative;
+  height: 80vh;
+  aspect-ratio: 0,4862;
 }
 
+img{
+  user-select: none;
+  pointer-events: none;
+}
 
-.boton_principal_izquierda {
+.logo{
+  width: 15%;
+  height: auto;
   position: absolute;
-  top: 5em;
-  left: 21em;
-  top: 8em;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.circulo_0 {
-  height: 4em;
-  width: 7em;
-  border-radius: 50%;
-  padding: 9em;
-  position: relative;
-  left: -30em;
-  top: -1em;
-
+/* background */
+.bg-red-svg {
+  height: 80vh;
+}
+.bg-blanco {
+  width: 90%;
+  height: 85%;
+  background-color: white;
+  position: absolute;
+  top: 6.5%;
+  left: 5%;
+  border-radius: 3em;
+  z-index: -1;
 }
 
-.circulo_1 {
-  height: 11em;
-  width: 11em;
+/* elementos negros */
+.circulo_negro {
+  height: 60%;
+  aspect-ratio: 1;
   border-radius: 50%;
-  padding: 7em;
-  position: relative;
-  left: -6.5em;
-  top: -7em;
-
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  transform: translateX(-50%);
+}
+.rectangulo_negro{
+  height: 16%;
+  width: 100%;
+  position: absolute;
+  top: 42%;
 }
 
-
-
-.circulo_2 {
-  border-radius: 50%;
-  height: 8em;
-  width: 8em;
+/* pantalla */
+.content_canva {
+  height: 80%;
+  aspect-ratio: 4/5;
+  border-radius: 2em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pantalla{
+  height: 90%;
+  width: 90%;
+  border-radius: 1em;
+  background-color: rgb(127, 221, 255);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.circulo_3 {
-  border-radius: 50%;
-  height: 4em;
-  width: 4em;
+/* lineas diagonales */
+.container_diagonales{
   position: absolute;
-  top: 50%;
-  left: 4em;
-  transform: translate(-50%, -50%);
-  padding: 3em;
+  top: 70%;
+  right: 15%;
+}
+.linea_diagonal{
+  height: 1.5vh;
+  aspect-ratio: 8/1;
+  border-radius: 50em;
+  transform: rotate(-20deg);
+  margin-top: 8%;
 }
 
-.linea_1 {
-  height: 12px;
-  width: 55px;
-  position: absolute;
-  top: 50%;
-  left: -48.4px;
-}
-
-.linea_2 {
-  height: 12px;
-  width: 55px;
-  position: absolute;
-  top: 50%;
-  left: 121px;
-
-}
-
-.main {
-  transform: translate(-50% -50%);
-  position: relative;
-  width: 52em;
-  height: 32em;
-}
-
-.background {
-  height: 32em;
-
-}
-
-.bgblanco {
-  width: 90%;
-  height: 85%;
-  background-color: aliceblue;
-  position: absolute;
-  top: 6.5%;
-  left: 5%;
-  z-index: -1;
-  border-radius: 5%;
-}
-
-.content_canva {
-  width: 20em;
-  height: 24em;
-  position: absolute;
-  top: 5.2em;
-  bottom: 0px;
-  right: 16em;
-  border-radius: 1rem;
- 
-}
-
-.rectangulo_1{
-  
-  height: 5em;
-  width: 14.3em;
-  position: absolute;
-  right: 28px;
-  bottom: 47%;
-}
-
-
-.rectangulo_2{
-  
-  height: 5em;
-  width: 14.3em;
-  position: absolute;
-  left: 28px;
-  bottom: 47%;
-}
-
-
-.rectangulos_diagonales{
-  height: 16em;
-  width: 12em;
-  position: absolute;
-  right: 5px;
-  bottom: 0px;
-  right: 5em;
-  display: flex;
-flex-direction: column;
-justify-content: center;
-
-
-}
-
-.rectangulo_diagonal_1{
-  height: 15px;
-  width: 80px;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: rotate(-35deg);
-}
-.rectangulo_diagonal_2{
-  height: 15px;
-  width: 80px;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: rotate(-35deg);
-  margin-top: 10px;
-}
-
-.rectangulo_diagonal_3{
-  height: 15px;
-  width: 80px;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: rotate(-35deg);
-  margin-top: 10px;
-}
-
-.rectangulo_diagonal_4{
-  height: 15px;
-  width: 80px;
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  transform: rotate(-35deg);
-  margin-top: 10px;
-}
-
-.boton_derecha_1{
-  position: absolute;
-  bottom: 15.5em;
-  right: 10em;
-  
-}
-
-.boton_derecha_2{
-  position: absolute;
-  bottom: 17.5em;
-  right: 6em;
-}
-
-.boton_derecha_3{
-  position: absolute;
-  top: 6.5em;
-  right: 9em;
-}
-
-
-
-
-
-
-
+/* botones derechos */
 .botones {
+  height: 7%;
+  aspect-ratio: 1;
   border-radius: 50%;
-  height: 37px;
-  width: 37px;
+  position: absolute;
+}
+.boton_verde_left{
+  top: 50%;
+  right: 14%;
+}
+.boton_verde_right{
+  top: 43.5%;
+  right: 9%;
+}
+.boton_amarillo{
+  top: 15%;
+  right: 20%;
 }
 
+/* botones de izquierda */
+.boton_principal_izquierda {
+  height: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circulo_negro_buton {
+  height: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.linea_negra {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.circulo_azul {
+  height: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+/* switches */
+.container_switches{
+  position: absolute;
+  top: 70%;
+  left: 17%;
+}
+.switcher{
+  height: 3vh;
+  aspect-ratio: 4.5/1;
+  border-radius: 50em;
+  transform: rotate(20deg);
+  margin-top: 10%;
+  position: relative;
+}
+.lever{
+  height: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 2%;
+  top: 0.26vh;
+}
+
+/* colores */
 .black {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 }
-
-
 .green {
   background-color: #257425;
 }
-
 .red {
   background-color: #A60000;
 }
-
-.white {
-  background-color: #D9D9D9;
+.brown{
+  background-color: #350000;
 }
-
+.white {
+  background-color: #ffffff;
+}
 .blue {
   background-color: #8EA1FF;
 }
-
 .yellow{
   background-color: #E8FCBA;
 }
