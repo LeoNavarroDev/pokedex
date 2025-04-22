@@ -13,6 +13,7 @@ body {
   position: relative;
   height: 80vh;
   aspect-ratio: 0,4862;
+  transform-style: preserve-3d;
 }
 
 img{
@@ -24,9 +25,8 @@ img{
   width: 15%;
   height: auto;
   position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -3%;
+  left: 42.5%;
 }
 
 /* background */
@@ -42,6 +42,8 @@ img{
   left: 5%;
   border-radius: 3em;
   z-index: -1;
+  transform-style: preserve-3d;
+  transform: translateZ(-30px);
 }
 
 /* elementos negros */
@@ -71,8 +73,10 @@ img{
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
+  transform-style: preserve-3d;
+
 }
-.pantalla{
+.pantalla {
   height: 90%;
   width: 90%;
   border-radius: 1em;
@@ -80,7 +84,8 @@ img{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -56%;
+  margin-left: -45%;
 }
 
 /* lineas diagonales */
@@ -99,18 +104,20 @@ img{
 
 /* botones derechos */
 .botones {
-  height: 7%;
+  height: 6%;
   aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(30px);
 }
 .boton_verde_left{
   top: 50%;
-  right: 14%;
+  right: 15%;
 }
 .boton_verde_right{
   top: 43.5%;
-  right: 9%;
+  right: 11%;
 }
 .boton_amarillo{
   top: 15%;
@@ -124,7 +131,8 @@ img{
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -16%;
+  margin-left: -15%;
 }
 .circulo_negro_buton {
   height: 50%;
@@ -137,10 +145,10 @@ img{
 }
 .linea_negra {
   height: 10%;
-  width: 100%;
+  width: 110%;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -5%;
   transform: translateY(-50%);
 }
 .circulo_azul {
@@ -150,7 +158,8 @@ img{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -20%;
+  margin-left: -17%;
 }
 
 /* switches */
@@ -166,6 +175,7 @@ img{
   transform: rotate(20deg);
   margin-top: 10%;
   position: relative;
+  transform-style: preserve-3d;
 }
 .lever{
   height: 80%;
@@ -174,6 +184,8 @@ img{
   position: absolute;
   left: 2%;
   top: 0.26vh;
+  margin-top: -2%;
+  margin-left: 3%;
 }
 
 /* colores */
@@ -197,4 +209,15 @@ img{
 }
 .yellow{
   background-color: #E8FCBA;
+}
+
+
+
+.pre-level-parax{
+  transform-style: preserve-3d;
+  transform: translateZ(10px);
+}
+.first-level-parax{
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
 }
