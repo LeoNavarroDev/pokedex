@@ -9,6 +9,12 @@ body {
   place-items: center;
 }
 
+button{
+  cursor: pointer;
+  transition: transform .1s ease-in-out;
+  border: none;
+}
+
 .main {
   position: relative;
   height: 80vh;
@@ -125,6 +131,9 @@ img{
   top: 15%;
   right: 20%;
 }
+.boton_amarillo:active {
+  transform: translateZ(20px);
+}
 
 /* botones de izquierda */
 .boton_principal_izquierda {
@@ -164,7 +173,7 @@ img{
   margin-left: -17%;
 }
 
-/* botones-control */
+/* botones de control */
 .botones-control{
   height: 13%;
   width: 20%;
@@ -186,6 +195,8 @@ img{
   display: flex;
   place-content: center;
   place-items: center;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 .botones-control button img{
   position: absolute;
@@ -214,6 +225,9 @@ img{
 .left img{
   transform: rotate(180deg);
 }
+.botones-control button:active {
+  transform: translateZ(-10px);
+}
 
 /* switches */
 .container_switches{
@@ -239,7 +253,13 @@ img{
   top: 0.26vh;
   margin-top: -2%;
   margin-left: 3%;
+  transition: left 0.3s ease;
+  cursor: pointer;
 }
+.switcher.on .lever {
+  left: calc(100% - 1em - 10%);
+}
+
 
 /* lights */
 .lights{

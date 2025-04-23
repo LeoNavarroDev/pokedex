@@ -1,4 +1,3 @@
-
 VanillaTilt.init(document.querySelectorAll(".tilt-main"), {
     max: 5,
     speed: 2000,
