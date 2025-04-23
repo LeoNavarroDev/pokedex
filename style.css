@@ -20,6 +20,7 @@ button{
   height: 80vh;
   aspect-ratio: 0,4862;
   transform-style: preserve-3d;
+  perspective: 800px;
 }
 
 img{
@@ -49,7 +50,7 @@ img{
   border-radius: 3em;
   z-index: -1;
   transform-style: preserve-3d;
-  transform: translateZ(-30px);
+  transform: translateZ(-10px);
 }
 
 /* elementos negros */
@@ -132,9 +133,10 @@ img{
   right: 20%;
 }
 .boton_amarillo:active {
-  transform: translateZ(20px);
+  transform: translateZ(25px);
 }
 
+/* botones de izquierda */
 /* botones de izquierda */
 .boton_principal_izquierda {
   height: 50%;
@@ -144,6 +146,24 @@ img{
   top: 50%;
   margin-top: -16%;
   margin-left: -15%;
+  transform-style: preserve-3d;
+}
+.boton_principal_top, .boton_principal_bottom {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translateZ(5px);
+}
+.boton_principal_top {
+  clip-path: inset(0 0 58% 0 round 0);
+}
+.boton_principal_bottom {
+  clip-path: inset(58% 0 0 0 round 0);
 }
 .circulo_negro_buton {
   height: 50%;
@@ -154,14 +174,6 @@ img{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.linea_negra {
-  height: 10%;
-  width: 110%;
-  position: absolute;
-  top: 50%;
-  left: -5%;
-  transform: translateY(-50%);
-}
 .circulo_azul {
   height: 40%;
   aspect-ratio: 1;
@@ -170,7 +182,17 @@ img{
   top: 50%;
   left: 50%;
   margin-top: -20%;
-  margin-left: -17%;
+  margin-left: -18%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translateZ(10px);
+}
+.boton_principal_top:active,
+.boton_principal_bottom:active {
+  transform: translateZ(0px);
+}
+.circulo_azul:active {
+  transform: translateZ(5px);
 }
 
 /* botones de control */
@@ -226,7 +248,7 @@ img{
   transform: rotate(180deg);
 }
 .botones-control button:active {
-  transform: translateZ(-10px);
+  transform: translateZ(-3px);
 }
 
 /* switches */
@@ -251,8 +273,8 @@ img{
   position: absolute;
   left: 2%;
   top: 0.26vh;
-  margin-top: -2%;
-  margin-left: 3%;
+  margin-top: -4%;
+  margin-left: 5%;
   transition: left 0.3s ease;
   cursor: pointer;
 }
@@ -315,7 +337,8 @@ img{
   background-color: #ffffff;
 }
 .blue {
-  background-color: #8EA1FF;
+  background: #8EA1FF;
+  background: radial-gradient(circle, rgba(142, 161, 255, 1) 100%, rgba(201, 209, 255, 1) 0%);
 }
 .yellow{
   background-color: #E8FCBA;
