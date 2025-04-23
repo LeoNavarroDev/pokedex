@@ -80,7 +80,7 @@ img{
   height: 90%;
   width: 90%;
   border-radius: 1em;
-  background-color: rgb(127, 221, 255);
+  background-color: rgb(171, 233, 255);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -114,10 +114,12 @@ img{
 .boton_verde_left{
   top: 50%;
   right: 15%;
+  display: none;
 }
 .boton_verde_right{
   top: 43.5%;
   right: 11%;
+  display: none;
 }
 .boton_amarillo{
   top: 15%;
@@ -162,6 +164,57 @@ img{
   margin-left: -17%;
 }
 
+/* botones-control */
+.botones-control{
+  height: 13%;
+  width: 20%;
+  position: absolute;
+  right: 5.5%;
+  top: 43.5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 5% 2%;
+}
+.botones-control button{
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.botones-control button img{
+  position: absolute;
+  height: 50%;
+}
+.up{
+  grid-area: 1 / 2 / 2 / 3;
+}
+.down{
+  grid-area: 2 / 2 / 3 / 3;
+}
+.left{
+  border-radius: 19px 5px 5px 19px !important;
+  grid-area: 1 / 1 / 3 / 2;
+}
+.right{
+  grid-area: 1 / 3 / 3 / 4; 
+  border-radius: 5px 19px 19px 5px !important;
+} 
+.up img{
+  transform: rotate(-90deg);
+}
+.down img{
+  transform: rotate(90deg);
+}
+.left img{
+  transform: rotate(180deg);
+}
+
 /* switches */
 .container_switches{
   position: absolute;
@@ -187,6 +240,43 @@ img{
   margin-top: -2%;
   margin-left: 3%;
 }
+
+/* lights */
+.lights{
+  width: 5%;
+  position: absolute;
+  left: 21%;
+  top: 15%;
+  display: flex;
+  z-index: 3;
+}
+.lights *{
+  width: 25%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+
+}
+.light-red {
+  background-color: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+  animation: blinkRed 5s infinite;
+}
+
+.light-yellow {
+  background-color: #ffff00;
+  box-shadow: 0 0 8px #ffff00;
+  left: 25%;
+  animation: blinkYellow 2s infinite;
+}
+
+.light-green {
+  background-color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+  left: 50%;
+  animation: blinkGreen 3s infinite;
+}
+
 
 /* colores */
 .black {
@@ -220,4 +310,40 @@ img{
 .first-level-parax{
   transform-style: preserve-3d;
   transform: translateZ(20px);
+}
+
+
+/* animations */
+@keyframes blinkRed {
+  0%, 40% {
+    opacity: 1;
+  }
+  50%, 90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blinkYellow {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 95% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blinkGreen {
+  0%, 40% {
+    opacity: 1;
+  }
+  50%, 90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
